@@ -10,3 +10,7 @@ Project created by: <br />
  &nbsp;&nbsp;&nbsp; [Giovanni Portogallo](https://github.com/giop54), <br />
  &nbsp;&nbsp;&nbsp; [Madisen Tate](https://github.com/tateml8), <br />
  &nbsp;&nbsp;&nbsp; [Faheel Uddin](https://github.com/Fuddin21) <br />
+
+# System
+- [Java](https://java.com/en/)
+- [Git 2.33.1 ](https://git-scm.com/)
