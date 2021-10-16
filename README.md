@@ -12,5 +12,5 @@ Project created by: <br />
  &nbsp;&nbsp;&nbsp; [Faheel Uddin](https://github.com/Fuddin21) <br />
 
 # System
-- [Java](https://java.com/en/download/)
+- [Java SE 17](https://java.com/en/download/)
 - [Git 2.33.1 ](https://git-scm.com/)
