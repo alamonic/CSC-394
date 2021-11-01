@@ -1,7 +1,5 @@
 h1 {
     font-family: "Raleway", sans-serif;
-    font-weight: bold;
-    text-align: center;
 }
 ul {
     font-family: "Quicksand", sans-serif;
@@ -22,7 +20,7 @@ ul#menu li a {
     text-decoration: none;
 }
 li {
-    font-family: "PTSans", sans-serif;
+    font-family: "Quicksand", sans-serif;
     float: left;
     border-right: 1px solid #bbb;
 }
