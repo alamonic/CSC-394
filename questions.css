@@ -1,7 +1,90 @@
-h1 {
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #768098;
+    font-family:  'Open Sans';
+    font-style: normal;
+    font-weight: bold;
+}
+
+body, .topnav, .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.topnav {
+    position: absolute;
+    left: 60px;
+    background-color: #b3b3b3;
+    padding: 20px;
+    transition: 0.5s;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0,0,0,.2);
+}
+
+.navbar {
+    margin: 0;
+    padding: 0;
+    width: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.topnav input:checked ~ .navbar {
+    width: 470px;
+    height: 50px;
+}
+
+.navbar li {
+    list-style: none;
+    margin: 10px;
+}
+.navbar li a {
+    text-decoration: antiquewhite;
+    color: #666;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: 0.5s;
+}
+.navbar li a:hover {
+    color: #161919;
+}
+.topnav input {
+    width: 40px;
+    height: 50px;
+    cursor: pointer;
+    opacity: 0;
+}
+.topnav span {
+    position: absolute;
+    left: 30px;
+    width: 26px;
+    height: 8px;
+    border-radius: 9px;
+    background-color: #595959;
+    pointer-events: none;
+    transition: 0.5s;
+}
+.topnav input:checked ~ span {
+    background-color: #77773c;
+}
+.topnav span:nth-child(2) {
+    transform: translateY(-8px);
+}
+.topnav input:checked ~ span:nth-child(2) {
+    transform: translateY(0) rotate(-45deg);
+}
+.topnav span:nth-child(3) {
+    transform: translateY(8px);
+}
+.topnav input:checked ~ span:nth-child(3) {
+    transform: translateY(0) rotate(45deg);
+}
+/*h1 {
     font-family: "Raleway", sans-serif;
     font-weight: bold;
-    text-align: center;
 }
 ul {
     font-family: "Quicksand", sans-serif;
@@ -32,3 +115,4 @@ li a:hover {
 a:active {
     color: #999999;
 }
+*/
