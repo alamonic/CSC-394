@@ -5,11 +5,12 @@ html{
 body {
     min-height: 80vh;
     background-color: #e6e6e6;
-    font-family:  'Open Sans';
+    font-family: "Inter";
 }
 
 h1 {
     font-size: 40px;
+    font-family: "Prompt";
 }
 
 body, .centerNav, .navBar {
