@@ -1,11 +1,15 @@
+html{
+    height: 110%;
+}
+
 body {
-    margin: 0;
-    padding: 0;
     min-height: 100vh;
-    background-color: #768098;
+    background-color: #e6e6e6;
     font-family:  'Open Sans';
-    font-style: normal;
-    font-weight: bold;
+}
+
+h1 {
+    font-size: 30px;
 }
 
 body, .topNav, .navBar {
@@ -17,10 +21,11 @@ body, .topNav, .navBar {
 .topNav {
     position: absolute;
     left: 60px;
-    background-color: #b3b3b3;
+    background-color: #f2f2f2;
     padding: 20px;
+    height: 40px;
     transition: 0.5s;
-    border-radius: 50px;
+    border-radius: 050px;
     overflow: hidden;
     box-shadow: 0 8px 15px rgba(0,0,0,.2);
 }
@@ -42,11 +47,12 @@ body, .topNav, .navBar {
     margin: 10px;
 }
 .navBar li a {
-    text-decoration: antiquewhite;
+    text-decoration: none;
     color: #666;
     text-transform: uppercase;
     font-weight: 600;
     transition: 0.5s;
+    font-size: 17px;
 }
 .navBar li a:hover {
     color: #161919;
@@ -60,9 +66,9 @@ body, .topNav, .navBar {
 .topNav span {
     position: absolute;
     left: 30px;
-    width: 26px;
-    height: 8px;
-    border-radius: 9px;
+    width: 30px;
+    height: 7px;
+    border-radius: 50px;
     background-color: #595959;
     pointer-events: none;
     transition: 0.5s;
