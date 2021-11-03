@@ -1,16 +1,3 @@
-#  Software Projects
-Building an application that allows remote team workers to plan tasks, track them, and evaluate the tasks and reward each other in various ways using Java and JavaScript (JS Libraries/HTML/CSS)
+#  Backend Branch
 
-# Credits: 
-Project created by: <br />
- &nbsp;&nbsp;&nbsp; [Haffiz Abera](https://github.com/sixmileferret), <br />
- &nbsp;&nbsp;&nbsp; [Nathan Borre](https://github.com/NBorre347), <br />
- &nbsp;&nbsp;&nbsp; [Lexi LaMonica](https://github.com/alamonic), <br />
- &nbsp;&nbsp;&nbsp; [Nicholas Leppert](https://github.com/LordNile), <br />
- &nbsp;&nbsp;&nbsp; [Giovanni Portogallo](https://github.com/giop54), <br />
- &nbsp;&nbsp;&nbsp; [Madisen Tate](https://github.com/tateml8), <br />
- &nbsp;&nbsp;&nbsp; [Faheel Uddin](https://github.com/Fuddin21) <br />
-
-# System
-- [Java SE 17](https://java.com/en/download/)
-- [Git 2.33.1 ](https://git-scm.com/)
+NOTE: Project contains assets from other branches (.html, .js, and .css) that may be outdated.
