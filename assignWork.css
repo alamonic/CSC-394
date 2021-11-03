@@ -8,13 +8,13 @@ body {
     font-weight: bold;
 }
 
-body, .topnav, .navbar {
+body, .topNav, .navBar {
     display: flex;
     justify-content: center;
     align-items: baseline;
 }
 
-.topnav {
+.topNav {
     position: absolute;
     left: 60px;
     background-color: #b3b3b3;
@@ -25,39 +25,39 @@ body, .topnav, .navbar {
     box-shadow: 0 8px 15px rgba(0,0,0,.2);
 }
 
-.navbar {
+.navBar {
     margin: 0;
     padding: 0;
     width: 0;
     overflow: hidden;
     transition: 0.5s;
 }
-.topnav input:checked ~ .navbar {
+.topNav input:checked ~ .navBar {
     width: 470px;
     height: 50px;
 }
 
-.navbar li {
+.navBar li {
     list-style: none;
     margin: 10px;
 }
-.navbar li a {
+.navBar li a {
     text-decoration: antiquewhite;
     color: #666;
     text-transform: uppercase;
     font-weight: 600;
     transition: 0.5s;
 }
-.navbar li a:hover {
+.navBar li a:hover {
     color: #161919;
 }
-.topnav input {
+.topNav input {
     width: 40px;
     height: 50px;
     cursor: pointer;
     opacity: 0;
 }
-.topnav span {
+.topNav span {
     position: absolute;
     left: 30px;
     width: 26px;
@@ -67,53 +67,18 @@ body, .topnav, .navbar {
     pointer-events: none;
     transition: 0.5s;
 }
-.topnav input:checked ~ span {
+.topNav input:checked ~ span {
     background-color: #77773c;
 }
-.topnav span:nth-child(2) {
+.topNav span:nth-child(2) {
     transform: translateY(-8px);
 }
-.topnav input:checked ~ span:nth-child(2) {
+.topNav input:checked ~ span:nth-child(2) {
     transform: translateY(0) rotate(-45deg);
 }
-.topnav span:nth-child(3) {
+.topNav span:nth-child(3) {
     transform: translateY(8px);
 }
-.topnav input:checked ~ span:nth-child(3) {
+.topNav input:checked ~ span:nth-child(3) {
     transform: translateY(0) rotate(45deg);
 }
-/*h1 {
-    font-family: "Raleway", sans-serif;
-    font-weight: bold;
-}
-ul {
-    font-family: "Quicksand", sans-serif;
-    font-weight: bold;
-    width: 40%;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #666;
-}
-ul#menu li a {
-    font-family: "Quicksand", sans-serif;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-li {
-    font-family: "Quicksand", sans-serif;
-    float: left;
-    border-right: 1px solid #bbb;
-}
-li a:hover {
-    background-color: #a3a375;
-}
-a:active {
-    color: #999999;
-}
-
- */
