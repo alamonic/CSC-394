@@ -1,0 +1,51 @@
+html {
+    height: 110%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    font-family: "Arial Black", sans-serif;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background-color: white;
+}
+
+#main {
+    width: 50%;
+    height: 50%;
+    display: grid;
+    font-size: 16px;
+    justify-items: center;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.createAcct {
+    font-size: 30px;
+    text-align: right;
+    width: 100px;
+    height: 10px;
+}
+
+#createForm {
+    align-self: flex-start;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.createForm::placeholder {
+    color: #3a3a3a;
+}
+
+.createForm {
+    border: none;
+    border-bottom: 1px solid #3a3a3a;
+    font-size: 18px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    outline: none;
+    padding: 0px 0px 5px 5px;
+}
