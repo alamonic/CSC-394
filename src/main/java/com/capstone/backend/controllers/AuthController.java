@@ -1,7 +1,9 @@
 package com.capstone.backend.controllers;
 
 import com.capstone.backend.data.models.User;
+import com.capstone.backend.data.repos.ResponseRepository;
 import com.capstone.backend.data.repos.UserRepository;
+import com.capstone.backend.services.ResponseService;
 import com.capstone.backend.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -20,10 +22,16 @@ public class AuthController {
     private UserRepository userRepo;
     private UserService userService;
 
+    private ResponseRepository responseRepo;
+    private ResponseService responseService;
+
     @Autowired // Tells Spring to instantiate arguments and manage the instances ("Beans")
-    public AuthController(UserRepository userRepo, UserService userService) {
+    public AuthController(UserRepository userRepo, UserService userService, ResponseRepository responseRepo, ResponseService responseService) {
         this.userRepo = userRepo;
         this.userService = userService;
+
+        this.responseRepo = responseRepo;
+        this.responseService = responseService;
     }
 
     @GetMapping // Indicates that this method handles GET requests to endpoint www.example.com/api/auth

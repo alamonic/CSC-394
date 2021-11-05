@@ -29,18 +29,44 @@ public class UserService {
         ));
     }
 
+    /*public String createAccount(String username, String password)
+    {
+        Optional<User> userQuery = userRepo.findById(username);
+        if (userQuery.isPresent())
+        {
+            // Error
+            return "userExists";
+        }
+
+        User newUser = new User(username, password, "user");
+    }*/
+
     public String validateLoginCreds(String username, String password) {
         // Query DB to find user rows that contain the supplied name and password
         Optional<User> userQuery = userRepo.findById(username);
-        Optional<User> passQuery = userRepo.findByPassword(password);
+        //Optional<User> passQuery= userRepo.findByPassword(password);
+        Iterable<User> passQuery = userRepo.findAllByPassword(password);
 
-        // If DB queries returned rows, get username value in each row
+        boolean foundUser = false;
+        String passQueryId = null;
         String userQueryId = userQuery.isPresent() ? userQuery.get().getUsername() : null;
-        String passQueryId = passQuery.isPresent() ? passQuery.get().getUsername() : null;
 
-        // If the same user was returned by each query, then the login was valid
-        if (userQuery.isPresent() && passQuery.isPresent() && userQueryId == passQueryId) {
-            return userQuery.get().getRole(); // "user" or "admin"
+        if (userQueryId != null)
+        {
+            for (User u : passQuery)
+            {
+                if (u.getUsername().equals(userQueryId))
+                {
+                    passQueryId = u.getUsername();
+                    foundUser = true;
+                    break;
+                }
+            }
+        }
+        //String passQueryId = passQuery.isPresent() ? passQuery.get().getUsername() : null;
+
+        if (userQuery.isPresent() && foundUser && userQueryId == passQueryId) {
+            return userQuery.get().getRole();
         }
         else {
             return "notfound"; // User/pass combo is invalid
