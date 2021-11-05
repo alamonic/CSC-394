@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ResponseService {
@@ -32,5 +33,19 @@ public class ResponseService {
                 new Response(1125, "oen comment", 3, 3, 3, 3, 3, userRepo.findById("willis123").get()),
                 new Response(1125, "eno comment", 3, 3, 1, 5, 2, userRepo.findById("willis123").get())
         ));
+    }
+
+    Iterable<Response> getAllResponsesFromUser(String username)
+    {
+        Optional<User> user = userRepo.findById(username);
+
+        if (user.isPresent())
+        {
+            return responseRepo.findAllByUserId(user.get());
+        }
+        else
+        {
+            return null;
+        }
     }
 }
