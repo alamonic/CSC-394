@@ -25,18 +25,46 @@ public class UserService {
     void loadSeedData() {
         userRepo.saveAll(List.of(
                 new User("willis123", "password123", "user"),
-                new User("david321", "password321", "user")
+                new User("david321", "password321", "admin")
         ));
     }
 
+    /*public String createAccount(String username, String password)
+    {
+        Optional<User> userQuery = userRepo.findById(username);
+        if (userQuery.isPresent())
+        {
+            // Error
+            return "userExists";
+        }
+
+        User newUser = new User(username, password, "user");
+    }*/
+
     public String validateLoginCreds(String username, String password) {
         Optional<User> userQuery = userRepo.findById(username);
-        Optional<User> passQuery= userRepo.findByPassword(password);
+        //Optional<User> passQuery= userRepo.findByPassword(password);
+        Iterable<User> passQuery = userRepo.findAllByPassword(password);
 
+        boolean foundUser = false;
+        String passQueryId = null;
         String userQueryId = userQuery.isPresent() ? userQuery.get().getUsername() : null;
-        String passQueryId = passQuery.isPresent() ? passQuery.get().getUsername() : null;
 
-        if (userQuery.isPresent() && passQuery.isPresent() && userQueryId == passQueryId) {
+        if (userQueryId != null)
+        {
+            for (User u : passQuery)
+            {
+                if (u.getUsername().equals(userQueryId))
+                {
+                    passQueryId = u.getUsername();
+                    foundUser = true;
+                    break;
+                }
+            }
+        }
+        //String passQueryId = passQuery.isPresent() ? passQuery.get().getUsername() : null;
+
+        if (userQuery.isPresent() && foundUser && userQueryId == passQueryId) {
             return userQuery.get().getRole();
         }
         else {
