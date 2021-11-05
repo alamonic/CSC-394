@@ -1,5 +1,6 @@
 package com.capstone.backend.controllers;
 
+import com.capstone.backend.data.models.User;
 import com.capstone.backend.data.repos.UserRepository;
 import com.capstone.backend.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,4 +41,5 @@ public class AuthController {
         jsonResponse.put("status", userStatus);
         return jsonResponse;
     }
+
 }

@@ -18,7 +18,7 @@ public class User {
     @Getter @Setter
     private String lastName;
     @Getter @Setter
-    private String role;
+    private String role = "user";
     @Getter @Setter @ManyToOne // TODO: Proper foreign key relation/cascading for Team->User
     private Team team;
     //TODO: Re-add responses field once Response model is up
