@@ -1,5 +1,6 @@
 package com.capstone.backend.controllers;
 
+import com.capstone.backend.data.models.Response;
 import com.capstone.backend.data.models.User;
 import com.capstone.backend.data.repos.ResponseRepository;
 import com.capstone.backend.data.repos.UserRepository;
@@ -50,4 +51,8 @@ public class AuthController {
         return jsonResponse;
     }
 
+    @GetMapping("testResponseSeed")
+    Iterable<Response> getResponses() {
+        return responseRepo.findAll();
+    }
 }
