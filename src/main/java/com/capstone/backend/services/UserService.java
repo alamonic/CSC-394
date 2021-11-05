@@ -25,22 +25,25 @@ public class UserService {
     void loadSeedData() {
         userRepo.saveAll(List.of(
                 new User("willis123", "password123", "user"),
-                new User("david321", "password321", "user")
+                new User("david321", "password321", "admin")
         ));
     }
 
     public String validateLoginCreds(String username, String password) {
+        // Query DB to find user rows that contain the supplied name and password
         Optional<User> userQuery = userRepo.findById(username);
-        Optional<User> passQuery= userRepo.findByPassword(password);
+        Optional<User> passQuery = userRepo.findByPassword(password);
 
+        // If DB queries returned rows, get username value in each row
         String userQueryId = userQuery.isPresent() ? userQuery.get().getUsername() : null;
         String passQueryId = passQuery.isPresent() ? passQuery.get().getUsername() : null;
 
+        // If the same user was returned by each query, then the login was valid
         if (userQuery.isPresent() && passQuery.isPresent() && userQueryId == passQueryId) {
-            return userQuery.get().getRole();
+            return userQuery.get().getRole(); // "user" or "admin"
         }
         else {
-            return "notfound";
+            return "notfound"; // User/pass combo is invalid
         }
     }
 }
