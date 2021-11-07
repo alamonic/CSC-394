@@ -4,6 +4,8 @@ function changeUsername(username){
 }
 
 function startTimer(duration, display) {
+    fetch("/responses/starttimer", {method: "GET"})
+        .then(res => res.json())
     var timer = duration, minutes, seconds;
     setInterval(function () {
         minutes = parseInt(timer / 60, 10);
