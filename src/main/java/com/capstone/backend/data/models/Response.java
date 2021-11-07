@@ -94,7 +94,3 @@ public class Response {
                 '}';
     }
 }
-
-
-// TODO: Add Response model and repository
-// TODO: Add Response controller and service bean to serve POST endpoints

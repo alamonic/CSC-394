@@ -1,5 +1,8 @@
 package com.capstone.backend.controllers;
 
+import com.capstone.backend.data.models.Response;
+import com.capstone.backend.data.repos.ResponseRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,7 +16,11 @@ import java.util.Map;
 @RestController
 @RequestMapping("/responses")
 public class ResponseController {
-    public ResponseController() {
+    private ResponseRepository responseRepo;
+
+    @Autowired
+    public ResponseController(ResponseRepository responseRepo) {
+        this.responseRepo = responseRepo;
     }
 
     @GetMapping("/starttimer")
@@ -38,5 +45,10 @@ public class ResponseController {
             HashMap<String, String> response = new HashMap<>();
             response.put("status", "yes :D");
             return response;
+    }
+
+    @GetMapping()
+    Iterable<Response> getAllResponses() {
+        return responseRepo.findAll();
     }
 }
