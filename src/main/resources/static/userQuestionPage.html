@@ -4,16 +4,15 @@
     <meta charset = "UTF-8">
     <title> Login Page </title>
     <link rel = "stylesheet" href = "userQuestionPage.css"> <!-- CS -->
-    <script defer src = "userPage.js"></script> <!-- JS-->
 </head>
 <body>
     <h1 id = "userQuestionHeader">Please Complete This Brief Questionnaire</h1>
 
     
 
-<form>
+<form method="POST" action="responses">
     <p>How difficult was the assigned task:</p>
-  <input type="radio" id="very" name="levle" value="very">
+  <input type="radio" id="very" name="level" value="very">
   <label for="html">Very diffucult</label><br>
   <input type="radio" id="moderate" name="level" value="moderate">
   <label for="css">Moderately difficult</label><br>
