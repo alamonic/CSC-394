@@ -29,9 +29,9 @@ public class ResponseService {
         // Seeds default user accounts into DB
     void loadSeedData() {
         responseRepo.saveAll(List.of(
-                new Response(1125, "one comment", 1, 2, 3, 4, 5, userRepo.findById("willis123").get()),
-                new Response(1125, "oen comment", 3, 3, 3, 3, 3, userRepo.findById("willis123").get()),
-                new Response(1125, "eno comment", 3, 3, 1, 5, 2, userRepo.findById("willis123").get())
+                new Response("one comment", 1, 2, 3, 4, 5, userRepo.findById("willis123").get()),
+                new Response("oen comment", 3, 3, 3, 3, 3, userRepo.findById("willis123").get()),
+                new Response("eno comment", 3, 3, 1, 5, 2, userRepo.findById("willis123").get())
         ));
     }
 

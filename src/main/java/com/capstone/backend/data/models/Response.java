@@ -8,14 +8,14 @@ import javax.persistence.*;
 @Entity
 @Table(name="user_responses")
 public class Response {
-    @Id @Getter @Setter @GeneratedValue
+    @Id @Getter @GeneratedValue
     private Integer response_id;
     @Getter @Setter
     private Long time_to_complete; // time measured in milliseconds, use System.currentTimeMillis()
     @Getter @Setter
     private String comments; // user comments
     @Getter @Setter
-    private String question1;
+    private String question1 = "How difficult was the work you completed?";
     @Getter @Setter
     private Integer response1; // stored as int since the question will have a 1-5 scale
     @Getter @Setter
@@ -40,8 +40,7 @@ public class Response {
     public Response() {
     }
 
-    public Response(int response_id, String comments, int response1, int response2, int response3, int response4, int response5, User user_id) {
-        //this.response_id = response_id;
+    public Response(String comments, int response1, int response2, int response3, int response4, int response5, User user_id) {
         this.time_to_complete = 0L;
         this.comments = comments;
         this.response1 = response1;
@@ -52,8 +51,7 @@ public class Response {
         this.userId = user_id;
     }
 
-    public Response(int response_id, String comments, String question1, int response1, String question2, int response2, String question3, int response3, String question4, int response4, String question5, int response5, User user_id) {
-        //this.response_id = response_id;
+    public Response(String comments, String question1, int response1, String question2, int response2, String question3, int response3, String question4, int response4, String question5, int response5, User user_id) {
         this.time_to_complete = 0L;
         this.comments = comments;
         this.question1 = question1;
