@@ -7,7 +7,8 @@ loginButton.addEventListener("click", (input) => {
     input.preventDefault();
     const username = loginForm.username.value;
     const password = loginForm.password.value;
-})
+}
+)
    /*
    We'll need to change this to be universal for each user; should work once database is up
             if (username === "user" && password === " ") {
