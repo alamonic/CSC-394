@@ -1,0 +1,22 @@
+
+
+body {
+    height: 100%;
+    margin: 0;
+    font-family: "Arial Black", sans-serif;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    background-color: #white;
+}
+
+#main {
+    width: 50%;
+    height: 50%;
+    display: grid;
+    font-size: 18px;
+    justify-items: center;
+    align-items: center;
+    border-radius: 15px;
+}
+
