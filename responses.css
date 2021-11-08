@@ -4,14 +4,19 @@ html{
 
 body {
     min-height: 100vh;
-    background-color: #e6e6e6;
+    background-color: white;
     font-family:  'Open Sans';
+
 }
 
 h1 {
     font-size: 30px;
 }
-
+h2{
+    position: absolute;
+    top: 85%;
+    left: 20%;
+}
 body, .topNav, .navBar {
     display: flex;
     justify-content: center;
@@ -87,4 +92,24 @@ body, .topNav, .navBar {
 }
 .topNav input:checked ~ span:nth-child(3) {
     transform: translateY(0) rotate(45deg);
+}
+
+#piechart{
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    font-family: "Prompt";
+    font-size: 15px;
+}
+#results{
+    position: absolute;
+    top: 90%;
+    left: 20%;
+}
+table {
+    border-collapse: collapse;
+}
+td, th {
+    border: 1px solid black;
+    padding: 4px 4px 4px 4px;
 }
