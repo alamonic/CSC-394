@@ -3,23 +3,50 @@
 <head>
     <meta charset = "UTF-8">
     <title> Login Page </title>
-    <link rel = "stylesheet" href = "loginPage.css"> <!-- CS -->
-    <script defer src = "loginPage.js"></script> <!-- JS-->
+    <link rel = "stylesheet" href = "loginPage.css">
+    <script defer src = "loginPage.js"></script>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Prompt">
 </head>
 <body>
-    <main id = "main">
-      <h1 id = "loginHeader"> Login </h1>
-        <div id = "loginErrorMsgHolder">
-            <p id = "loginErrorMsg"> Invalid username <span id="errorMsgSecondLine"> or password </span></p>
-        </div>
+<h1 id="welcomeHeader"> Welcome </h1>
+<h2 id = "loginHeader"> Sign into your account </h2>
 
-        <form id="loginForm">
-            <input type = "text" name = "username" id = "usernameField" class = "loginForm" placeholder = "Username">
+<form id="loginForm">
+    <label for="usernameField"><b></b></label>
+    <input type = "username" name = "username" id = "usernameField" class = "loginForm" placeholder = "Username"  style="color: black">
+    <label for="passwordField"><b></b></label>
+    <input type = "password" name = "password" id = "passwordField" class = "loginForm" placeholder = "Password" style="color: black">
 
-            <input type = "password" name = "password" id = "passwordField" class = "loginForm" placeholder = "Password">
-            <input type="checkbox" value="lsRememberMe" id="rememberMe"> <label for="rememberMe">Remember me</label>
-                <input type="submit" value="Login"  id = "loginFormSubmit" onclick="lsRememberMe()" >
-        </form>
-    </main>
+    <!--DATABASE ??-->
+    <input type="checkbox" value="lsRememberMe" id="rememberMe"> <label for="rememberMe"></label>
+    <input type="submit" value="Login"  id = "loginFormSubmit" onclick="lsRememberMe()" >
+</form>
+
+<div id="remeMe">Remember me</div>
+<div id="Ques">Choose One: </div>
+
+<div id="typeOfUser">
+    <form action="#" method="get"> <!--DATABASE??-->
+        <input type="checkbox" name="switch4User" id="buttonForUser">
+        <label for="buttonForUser">User</label>
+        <input type="checkbox" name="switch4Admin" id="buttonForAdmin">
+        <label for="buttonForAdmin">Admin</label>
+    </form>
+</div>
+
+<div id="forgotCredentials" >
+    <span class="credentials"  style="color:#660000"> <a href="forgotCredentials.html"> Forgot Credentials?</a></span>
+</div>
+
+<div id = "loginErrorMsgHolder">
+    <p id = "loginErrorMsg"> Wrong Username <span id="errorMsgSecondLine"> or Password     <br>Try Again</b></span></p>
+
+
+</div>
+
+
 </body>
 </html>
+
