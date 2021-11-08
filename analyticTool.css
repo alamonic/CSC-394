@@ -1,20 +1,26 @@
 html{
     height: 110%;
 }
-
 body {
     min-height: 100vh;
-    background-color: white;
+    background-color: #e6e6e6;
     font-family:  'Open Sans';
-
 }
-
 h1 {
+    font-family: "Prompt";
     font-size: 30px;
 }
 h2{
+    font-family: "Prompt";
     position: absolute;
     top: 85%;
+    left: 20%;
+}
+#bio{
+    font-family: "Open Sans";
+    font-size: 15px;
+    position: absolute;
+    top: 12%;
     left: 20%;
 }
 body, .topNav, .navBar {
@@ -22,7 +28,6 @@ body, .topNav, .navBar {
     justify-content: center;
     align-items: baseline;
 }
-
 .topNav {
     position: absolute;
     left: 60px;
@@ -30,11 +35,10 @@ body, .topNav, .navBar {
     padding: 20px;
     height: 40px;
     transition: 0.5s;
-    border-radius: 050px;
+    border-radius: 50px;
     overflow: hidden;
     box-shadow: 0 8px 15px rgba(0,0,0,.2);
 }
-
 .navBar {
     margin: 0;
     padding: 0;
@@ -46,7 +50,6 @@ body, .topNav, .navBar {
     width: 470px;
     height: 50px;
 }
-
 .navBar li {
     list-style: none;
     margin: 10px;
@@ -93,7 +96,6 @@ body, .topNav, .navBar {
 .topNav input:checked ~ span:nth-child(3) {
     transform: translateY(0) rotate(45deg);
 }
-
 #piechart{
     position: absolute;
     top: 30%;
@@ -105,6 +107,8 @@ body, .topNav, .navBar {
     position: absolute;
     top: 90%;
     left: 20%;
+    font-family: "Prompt";
+    font-size: 10px;
 }
 table {
     border-collapse: collapse;
@@ -112,4 +116,11 @@ table {
 td, th {
     border: 1px solid black;
     padding: 4px 4px 4px 4px;
+}
+#responses{
+    position: absolute;
+    top: 24%;
+    left: 25%;
+    font-family: "Prompt";
+    font-size: 15px;
 }

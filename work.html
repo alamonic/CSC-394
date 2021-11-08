@@ -17,27 +17,49 @@
         <span></span>
         <div class="navBar">
             <li><a href="adminDashboard.html">Home</a></li>
-            <li><a href="responses.html">Responses</a></li>
+            <li><a href="analyticTool.html">Analytic Tool</a></li>
             <li><a href="questions.html">Questions</a></li>
             <li><a href="Work.html">Work</a></li>
         </div>
     </div>
-    <h1> Assign Work</h1>
+    <h1> Assign Work And Reward Users</h1>
+
     <h2> Assign Users </h2>
+    <div id="assignWorkBio">
+        <p>Administrator can assign work to users by entering their name and type of work <br>See below:</p>
+    </div>
         <div class="assign">
             <form > <div class="fullName">
-                 <label for="fname"> First name: </label> <br> <input type="text" id="fname" name="fname" style= "height:15px; width:150px" placeholder= "Enter"/><br>
-                <label for="lname"> Last name: </label> <br> <input type="text" id="lname" name="lname" style= "height:15px; width:150px" placeholder= "Enter"/>
+                 <label for="firstName"> First name: </label> <br>
+                    <input type="text" id="firstName" name="firstName" style= "height:15px; width:150px" placeholder= "Enter"/><br>
+                <label for="lastName"> Last name: </label> <br>
+                    <input type="text" id="lastName" name="lastName" style= "height:15px; width:150px" placeholder= "Enter"/>
             </div>
+                <input type="submit" value="Assign"  id = "assignSubmit" onclick="">
+
+                <div id="assignWorkHeader">Assign Work:</div>
+                <label for="assignWork"></label> <br>
+                   <input type="text" id="assignWork" name="assignWork" style= "height:15px; width:150px" placeholder= "Type of Work?"/><br>
+
             </form>
         </div>
+
     <h3> Reward Users </h3>
+    <div id="rewardUsersBio">
+        <p>Administrator can send shout-out awards to users. Entering their name and choose type of award <br>See below:</p>
+    </div>
         <div class="reward">
             <form > <div class="fullNameReward">
-                <label for="fName"> First name: </label> <br> <input type="text" id="fName" name="fName" style= "height:15px; width:150px" placeholder= "Enter"/><br>
-                <label for="lName"> Last name: </label> <br> <input type="text" id="lName" name="lName" style= "height:15px; width:150px" placeholder= "Enter"/>
+                <label for="firstNameReward"> First name: </label> <br> <input type="text" id="firstNameReward" name="firstNameReward" style= "height:15px; width:150px" placeholder= "Enter"/><br>
+                <label for="lastNameReward"> Last name: </label> <br> <input type="text" id="lastNameReward" name="lastNameReward" style= "height:15px; width:150px" placeholder= "Enter"/>
             </div>
+                <div id="rewardUsersCheckbox">
+                    <p>Choose Reward Option  </p>
+                </div>
+                <input type="checkbox" value="rewardType" id="rewardType"> <label for="rewardType"></label>
             </form>
+            <input type="submit" value="Send!"  id = "rewardSubmit" onclick="">
         </div>
+
 </body>
 </html>

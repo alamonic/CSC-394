@@ -21,7 +21,11 @@ function drawChart() {
         }
     });
     var responses = {
-        title: "User's responses"
+        title: "Q: How difficult was the assigned task?",
+        width: 700,
+        height: 300,
+        backgroundColor: '#e6e6e6',
+        is3D: true
     };
     var dataSum = google.visualization.data.group(
         dataTable,
