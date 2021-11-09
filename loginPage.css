@@ -43,13 +43,6 @@ body {
     font-family: "Prompt";
     font-size: 15px;
 }
-#typeOfUser{
-    position: absolute;
-    top: 50%;
-    left: 35%;
-    font-family: "Prompt";
-    font-size: 15px;
-}
 
 .credentials{
     color: #660000;
