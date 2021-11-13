@@ -42,7 +42,7 @@ body, .centerNav, .navBar {
 
 .navBar li {
     list-style: none;
-    margin: 0 10px;
+    margin: 10px;
 }
 .navBar li a {
     text-decoration: none;
@@ -50,14 +50,14 @@ body, .centerNav, .navBar {
     text-transform: uppercase;
     font-weight: 600;
     transition: 0.5s;
-    font-size: 18px;
+    font-size: 13px;
 }
 .navBar li a:hover {
     color: #161919;
 }
 .centerNav input {
     width: 40px;
-    height: 40px;
+    height: 50px;
     cursor: pointer;
     opacity: 0;
 }
