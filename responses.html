@@ -2,26 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel = "stylesheet" href = "analyticTool.css">
+    <link rel = "stylesheet" href = "responses.css">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Prompt">
     <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script defer src="responses.js"></script>
     <script src="buildChart.js"></script>
 
     <title>Responses From Users</title>
-</head>
-<body>
+    </head>
+    <body>
 
-<h1>Responses From Users</h1>
+    <h1>Responses From Users</h1>
     <div class="topNav">
         <input type="checkbox">
         <span> </span>
         <span></span>
         <div class="navBar">
-                <li><a href="adminDashboard.html">Home</a></li>
-                <li><a href="analyticTool.html">Analytic Tool</a></li>
-                <li><a href="questions.html">Questions</a></li>
-                <li><a href="work.html">Work</a></li>
+            <li><a href="adminDashboard.html">Home</a></li>
+            <li><a href="responses.html">Analytic Tool</a></li>
+            <li><a href="questions.html">Questions</a></li>
+            <li><a href="assignWork.html">Assign Work</a></li>
         </div>
     </div>
 
@@ -37,25 +38,20 @@
     <div id="piechart" >
         <!-- Connecting chart -->
     </div>
-
     <h2>  Results from users: </h2>
-    <!-- Dummy Vars; DATABASE NEEDED-->
+    <!-- Dummy Vars; DATABASE needed; can remove once done-->
     <table id="results"> <tbody>
-            <tr><td>Very difficult</td></tr>
-            <tr><td>Very difficult</td></tr>
-            <tr><td>Very difficult</td></tr>
-            <tr><td>Moderately difficult</td></tr>
-            <tr><td>Moderately difficult</td></tr>
-            <tr><td>Very difficult</td></tr>
-            <tr><td>Very easy</td></tr>
-            <tr><td>Very easy</td> </tr>
-            <tr><td>Very easy</td></tr>
-        </tbody>
+    <tr><td>Very difficult</td></tr>
+    <tr><td>Very difficult</td></tr>
+    <tr><td>Very difficult</td></tr>
+    <tr><td>Moderately difficult</td></tr>
+    <tr><td>Moderately difficult</td></tr>
+    <tr><td>Very difficult</td></tr>
+    <tr><td>Very easy</td></tr>
+    <tr><td>Very easy</td> </tr>
+    <tr><td>Very easy</td></tr>
+    </tbody>
     </table>
-<!-- May add later on, IDK yet.
-    <div id="likertScale" >
-        <p>Likert Scale </p>
-    </div>
--->
+
 </body>
 </html>

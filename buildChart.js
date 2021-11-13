@@ -1,3 +1,4 @@
+/* Using google charting*/
 google.charts.load('current', {
     packages: ['corechart'],
     callback: drawChart

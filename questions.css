@@ -15,7 +15,7 @@ h1 {
     left: 35%;
 
 }
- .topNav, .navBar {
+.topNav, .navBar {
     display: flex;
     justify-content: center;
     align-items: baseline;
@@ -55,7 +55,7 @@ h1 {
     text-transform: uppercase;
     font-weight: 600;
     transition: 0.5s;
-    font-size: 17px;
+    font-size: 13px;
 }
 .navBar li a:hover {
     color: #161919;
