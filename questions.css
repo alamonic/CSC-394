@@ -1,34 +1,197 @@
-h1 {
-    font-family: "Raleway", sans-serif;
-    font-weight: bold;
-    text-align: center;
+html{
+    height: 110%;
 }
-ul {
-    font-family: "Quicksand", sans-serif;
-    font-weight: bold;
-    width: 40%;
-    list-style-type: none;
+
+body {
+    min-height: 100vh;
+    background-color: #e6e6e6;
+    font-family:  'Open Sans';
+}
+
+h1 {
+    font-size: 30px;
+    position: absolute;
+    top:15%;
+    left: 35%;
+
+}
+.topNav, .navBar {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.topNav {
+    position: absolute;
+    left: 60px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    height: 40px;
+    transition: 0.5s;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0,0,0,.2);
+}
+
+.navBar {
     margin: 0;
     padding: 0;
+    width: 0;
     overflow: hidden;
-    background-color: #666;
+    transition: 0.5s;
 }
-ul#menu li a {
-    font-family: "Quicksand", sans-serif;
+.topNav input:checked ~ .navBar {
+    width: 470px;
+    height: 50px;
+}
+
+.navBar li {
+    list-style: none;
+    margin: 10px;
+}
+.navBar li a {
+    text-decoration: none;
+    color: #666;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: 0.5s;
+    font-size: 17px;
+}
+.navBar li a:hover {
+    color: #161919;
+}
+.topNav input {
+    width: 40px;
+    height: 50px;
+    cursor: pointer;
+    opacity: 0;
+}
+.topNav span {
+    position: absolute;
+    left: 30px;
+    width: 30px;
+    height: 7px;
+    border-radius: 50px;
+    background-color: #595959;
+    pointer-events: none;
+    transition: 0.5s;
+}
+.topNav input:checked ~ span {
+    background-color: #77773c;
+}
+.topNav span:nth-child(2) {
+    transform: translateY(-8px);
+}
+.topNav input:checked ~ span:nth-child(2) {
+    transform: translateY(0) rotate(-45deg);
+}
+.topNav span:nth-child(3) {
+    transform: translateY(8px);
+}
+.topNav input:checked ~ span:nth-child(3) {
+    transform: translateY(0) rotate(45deg);
+}
+
+
+.nav {
+    position: absolute;
+    background: #EEE;
+    width: 150px;
+    top:30%;
+    left: 8%;
+}
+.nav a {
     display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
+    padding: 5px 10px;
+    left: 30%;
+    color: #262626;
+    font-weight: bold;
     text-decoration: none;
 }
-li {
-    font-family: "Quicksand", sans-serif;
-    float: left;
-    border-right: 1px solid #bbb;
+
+.nav a.active {
+    background: #bbbb77;
 }
-li a:hover {
-    background-color: #a3a375;
+
+.nav a:first-child {
+    margin: 10px 0px 10px;
 }
-a:active {
-    color: #999999;
+
+.message {
+    font-size: 15px;
+    height: auto;
+    bottom: 65%;
+    right: 65%;
+    position: absolute;
+    left: 23%;
+    width: 60%;
+    margin-bottom: 5px;
+    padding: 5px;
+    background: #d9d9d9;
+    border-radius: 5px;
+}
+
+.message input {
+    position: absolute;
+    top: 8px; left: 10px;
+    width: 30px;
+}
+
+.message .sender {
+    display: block;
+    position: absolute;
+    left: 40px;
+    color: #000;
+    font-weight: bold;
+    width: 90px;
+}
+
+.message .title {
+    display: inline-block;
+    padding-left: 150px;
+    width: 100%;
+}
+
+.message .date {
+    position: absolute;
+    right: 10px;
+}
+.message2 {
+    font-size: 15px;
+    height: auto;
+    bottom: 60%;
+    right: 65%;
+    position: absolute;
+    left: 23%;
+    width: 60%;
+    margin-bottom: 5px;
+    padding: 5px;
+    background: #d9d9d9;
+    border-radius: 5px;
+}
+
+.message2 input {
+    position: absolute;
+    top: 8px; left: 10px;
+    width: 30px;
+}
+
+.message2 .sender2 {
+    display: block;
+    position: absolute;
+    left: 40px;
+    color: #000;
+    font-weight: bold;
+    width: 90px;
+}
+
+.message2 .title2 {
+    display: inline-block;
+    padding-left: 150px;
+    width: 100%;
+}
+
+.message2 .date2 {
+    position: absolute;
+    right: 10px;
 }
