@@ -81,6 +81,21 @@ body {
     display: inline-block;
 
 }
+#createAcctFormSubmit{
+    width: auto;
+    height: auto;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 7px;
+    color: lemonchiffon;
+    text-align: center;
+    background-color: #3a3a3a;
+    -webkit-appearance: checkbox;
+    -moz-appearance: checkbox;
+    display: inline-block;
+
+}
 .loginFormSubmit:first-child {
     align-self: center;
 }
