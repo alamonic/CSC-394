@@ -1,45 +1,38 @@
 html{
     height: 110%;
 }
+
 body {
     min-height: 100vh;
     background-color: #e6e6e6;
     font-family:  'Open Sans';
 }
+
 h1 {
-    font-family: "Prompt";
     font-size: 30px;
-}
-h2{
-    font-family: "Prompt";
     position: absolute;
-    top: 85%;
-    left: 20%;
+    top:15%;
+    left: 35%;
+
 }
-#bio{
-    font-family: "Open Sans";
-    font-size: 15px;
-    position: absolute;
-    top: 12%;
-    left: 20%;
-}
-body, .topNav, .navBar {
+ .topNav, .navBar {
     display: flex;
     justify-content: center;
     align-items: baseline;
 }
+
 .topNav {
     position: absolute;
     left: 60px;
     background-color: #f2f2f2;
     padding: 20px;
-    font-size: 16px;
-    height: 60px;
+    height: 40px;
     transition: 0.5s;
     border-radius: 50px;
     overflow: hidden;
     box-shadow: 0 8px 15px rgba(0,0,0,.2);
 }
+
 .navBar {
     margin: 0;
     padding: 0;
@@ -51,6 +44,7 @@ body, .topNav, .navBar {
     width: 470px;
     height: 50px;
 }
+
 .navBar li {
     list-style: none;
     margin: 10px;
@@ -61,7 +55,7 @@ body, .topNav, .navBar {
     text-transform: uppercase;
     font-weight: 600;
     transition: 0.5s;
-    font-size: 13px;
+    font-size: 17px;
 }
 .navBar li a:hover {
     color: #161919;
@@ -97,31 +91,108 @@ body, .topNav, .navBar {
 .topNav input:checked ~ span:nth-child(3) {
     transform: translateY(0) rotate(45deg);
 }
-#piechart{
+
+
+.nav {
     position: absolute;
-    top: 30%;
-    left: 20%;
-    font-family: "Prompt";
+    background: #EEE;
+    width: 150px;
+    top:30%;
+    left: 8%;
+}
+
+.nav a {
+    display: block;
+    padding: 5px 10px;
+    left: 30%;
+    color: #262626;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav a.active {
+    background: #bbbb77;
+}
+
+.nav a:first-child {
+    margin: 10px 0px 10px;
+}
+
+.message {
     font-size: 15px;
-}
-#results{
+    height: auto;
+    bottom: 65%;
+    right: 65%;
     position: absolute;
-    top: 90%;
-    left: 20%;
-    font-family: "Prompt";
-    font-size: 10px;
+    left: 23%;
+    width: 60%;
+    margin-bottom: 5px;
+    padding: 5px;
+    background: #d9d9d9;
+    border-radius: 5px;
 }
-table {
-    border-collapse: collapse;
-}
-td, th {
-    border: 1px solid black;
-    padding: 4px 4px 4px 4px;
-}
-#responses{
+
+.message input {
     position: absolute;
-    top: 24%;
-    left: 25%;
-    font-family: "Prompt";
+    top: 8px; left: 10px;
+    width: 30px;
+}
+
+.message .sender {
+    display: block;
+    position: absolute;
+    left: 40px;
+    color: #000;
+    font-weight: bold;
+    width: 90px;
+}
+
+.message .title {
+    display: inline-block;
+    padding-left: 150px;
+    width: 100%;
+}
+
+.message .date {
+    position: absolute;
+    right: 10px;
+}
+.message2 {
     font-size: 15px;
+    height: auto;
+    bottom: 60%;
+    right: 65%;
+    position: absolute;
+    left: 23%;
+    width: 60%;
+    margin-bottom: 5px;
+    padding: 5px;
+    background: #d9d9d9;
+    border-radius: 5px;
+}
+
+.message2 input {
+    position: absolute;
+    top: 8px; left: 10px;
+    width: 30px;
+}
+
+.message2 .sender2 {
+    display: block;
+    position: absolute;
+    left: 40px;
+    color: #000;
+    font-weight: bold;
+    width: 90px;
+}
+
+.message2 .title2 {
+    display: inline-block;
+    padding-left: 150px;
+    width: 100%;
+}
+
+.message2 .date2 {
+    position: absolute;
+    right: 10px;
 }

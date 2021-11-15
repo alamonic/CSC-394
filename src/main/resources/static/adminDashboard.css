@@ -1,34 +1,88 @@
-h1 {
-    font-family: "Raleway", sans-serif;
-    font-weight: bold;
-    text-align: center;
+html{
+    height: 110%;
 }
-ul {
-    font-family: "Quicksand", sans-serif;
-    font-weight: bold;
-    width: 40%;
-    list-style-type: none;
+
+body {
+    min-height: 80vh;
+    background-color: #e6e6e6;
+    font-family: "Inter";
+}
+
+h1 {
+    font-size: 40px;
+    font-family: "Prompt";
+}
+
+body, .centerNav, .navBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centerNav {
+    position: relative;
+    background-color: #f2f2f2;
+    padding: 20px;
+    transition: 0.5s;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0,0,0,.2);
+}
+
+.navBar {
     margin: 0;
     padding: 0;
+    width: 0;
     overflow: hidden;
-    background-color: #666;
+    transition: 0.5s;
 }
-ul#menu li a {
-    font-family: "Quicksand", sans-serif;
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
+.centerNav input:checked ~ .navBar {
+    width: 455px;
+}
+
+.navBar li {
+    list-style: none;
+    margin: 10px;
+}
+.navBar li a {
     text-decoration: none;
+    color: #666;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: 0.5s;
+    font-size: 13px;
 }
-li {
-    font-family: "PTSans", sans-serif;
-    float: left;
-    border-right: 1px solid #bbb;
+.navBar li a:hover {
+    color: #161919;
 }
-li a:hover {
-    background-color: #a3a375;
+.centerNav input {
+    width: 40px;
+    height: 50px;
+    cursor: pointer;
+    opacity: 0;
 }
-a:active {
-    color: #999999;
+.centerNav span {
+    position: absolute;
+    left: 30px;
+    width: 30px;
+    height: 4px;
+    border-radius: 50px;
+    background-color: #595959;
+    pointer-events: none;
+    transition: 0.5s;
+}
+.centerNav input:checked ~ span {
+    background-color: #77773c;
+}
+.centerNav span:nth-child(2) {
+    transform: translateY(-8px);
+}
+.centerNav input:checked ~ span:nth-child(2) {
+    transform: translateY(0) rotate(-45deg);
+}
+.centerNav span:nth-child(3) {
+    transform: translateY(8px);
+}
+.centerNav input:checked ~ span:nth-child(3) {
+    transform: translateY(0) rotate(45deg);
 }
