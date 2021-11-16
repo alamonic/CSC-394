@@ -15,14 +15,18 @@
 
         <form id="loginForm">
             <input type = "text" name = "username" id = "usernameField" class = "loginForm" placeholder = "Username">
-
             <input type = "password" name = "password" id = "passwordField" class = "loginForm" placeholder = "Password">
             <input type="checkbox" value="lsRememberMe" id="rememberMe"> <label for="rememberMe">Remember me</label>
-            <input value="Login"  id = "loginFormSubmit" onclick="isRememberMe()">
+            <input value="Login" type="submit"  id = "loginFormSubmit" onclick="isRememberMe()">
         </form>
-        <form action="createAccount.html">
+        <!--
+        <form id="createAccount.html">
             <input type="submit" id = "createAcctFormSubmit" value="Create Account" />
         </form>
+        -->
+        <div id="createAcctFormSubmit">
+            <span class="createAcctFormLink" > <a href="createAccount.html"> Create New Account Here</a></span>
+        </div>
         
     </main>
 </body>
