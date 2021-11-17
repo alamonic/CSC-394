@@ -1,3 +1,4 @@
+
 function changeUsername(username){
     document.getElementById("userHeader").innerHTML = "Welcome ";
 
@@ -35,9 +36,9 @@ window.onload = function () {
 };
 
 function init() {
-    
+
     changeUsername("username")
-  }
-  
-  
-  init();
+}
+
+
+init();
