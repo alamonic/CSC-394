@@ -5,8 +5,6 @@ function changeUsername(username){
 }
 
 function startTimer(duration, display) {
-    fetch("/responses/starttimer", {method: "GET"})
-        .then(res => res.json())
 
     var timer = duration, minutes, seconds;
     setInterval(function () {
@@ -30,7 +28,8 @@ function startTimer(duration, display) {
 }
 
 window.onload = function () {
-    var fiveMinutes = 60 * 5,
+    //var fiveMinutes = 60 * 5,
+    var fiveMinutes = 30,
         display = document.querySelector('#time');
     startTimer(fiveMinutes, display);
 };

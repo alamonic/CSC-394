@@ -44,7 +44,7 @@ public class ResponseController {
             session.setAttribute("Final Time", delta);
         }
             HashMap<String, String> response = new HashMap<>();
-            response.put("status", "yes :D");
+            response.put("status", "" + (Long)session.getAttribute("Final Time"));
             return response;
     }
 
@@ -58,31 +58,38 @@ public class ResponseController {
         getFinalTime(request); // Stop the timer
         HttpSession session = request.getSession();
 
-        Long delta = (long) session.getAttribute("Final Time");
+        Long delta = -1L;
+        if (session.getAttribute("Final Time") != null)
+        {
+            delta = (long) session.getAttribute("Final Time");
+        }
         String username = (String) session.getAttribute("Username");
 
         int hardness = 1;
         switch (level) {
-            case "very":
+            case "level=very":
                 hardness = 5;
                 break;
-            case "moderate":
+            case "level=moderate":
                 hardness = 3;
                 break;
-            case "easy":
+            case "level=easy":
                 hardness = 1;
                 break;
         }
 
-        responseRepo.save(
-                new Response(
-                null, hardness, 0,
-                0, 0, 0,
-                userRepo.findById(username).get()
-                ));
+        Response R = new Response(
+            null, hardness, 0,
+            0, 0, 0,
+            userRepo.findById(username).get()
+        );
+
+        R.SetCurrentDuration(delta);
+
+        responseRepo.save(R);
 
         HashMap<String, String> response = new HashMap<>();
-        response.put("status", "yes :D");
+        response.put("status", R.toString());
         return response;
     }
 }
