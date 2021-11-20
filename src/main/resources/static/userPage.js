@@ -1,7 +1,5 @@
-
 function changeUsername(username){
     document.getElementById("userHeader").innerHTML = "Welcome ";
-
 }
 
 function startTimer(duration, display) {
@@ -15,16 +13,15 @@ function startTimer(duration, display) {
 
         if (minutes<1) {
             document.getElementById("time").style.color = "red";
-
         }
-
         minutes = minutes < 10 ? "0" + minutes : minutes;
         seconds = seconds < 10 ? "0" + seconds : seconds;
 
         display.textContent = minutes + ":" + seconds;
 
         if (--timer < 0) {
-            timer = duration;
+           // timer = duration;
+            document.location.href = "/userQuestionPage.html";
         }
     }, 1000);
 }
@@ -36,9 +33,7 @@ window.onload = function () {
 };
 
 function init() {
-
     changeUsername("username")
 }
-
 
 init();

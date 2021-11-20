@@ -7,7 +7,6 @@ body {
 }
 
 #main {
-    display: grid;
     font-size: 18px;
     justify-items: center;
     border-radius: 15px;
@@ -76,8 +75,8 @@ body {
 #createAcctFormSubmit{
     padding: 5px;
     border-radius: 5px;
-    background-color: rgba(161,161,161,0.89);
     display: inline-block;
+    background-color: rgba(161,161,161,0.89);
 }
 a{
     font-size: 15px;
