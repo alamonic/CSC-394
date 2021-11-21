@@ -1,15 +1,56 @@
 html {
-    height: 110%;
+    height: 100%;
+    width: 100%;
+    margin:0;
+    background-color: #e6e6e6;
+}
+h1{
+    position: absolute;
+    top: 5%;
+    left: 35%;
+    font-family: "Prompt";
+    font-size: 60px;
+}
+h2{
+    position: absolute;
+    top: 27%;
+    left: 35%;
 }
 body {
-    font-family: "Arial Black", sans-serif;
-    background-color: white;
+    font-family: "Prompt";
+    display: ruby;
 }
-
-#main {
-    font-size: 18px;
-    justify-items: center;
-    border-radius: 15px;
+#usernameField{
+    position: absolute;
+    top: 36%;
+    left: 35%;
+    font-family: "Prompt";
+    font-size: 15px;
+}
+#passwordField{
+    position: absolute;
+    top: 41%;
+    left: 35%;
+    font-family: "Prompt";
+    font-size: 15px;
+}
+/*Box for RememberMe*/
+#rememberMe{
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    font-size: 15px;
+}
+/*Text for RememberMe*/
+#remeMe{
+    font-size: 15px;
+    font-family: Inter;
+    width: auto;
+    height: auto;
+    color: #3a3a3a;
+    right: 54%;
+    top: 50%;
+    position: absolute;
 }
 
 #loginErrorMsgHolder {
@@ -56,27 +97,37 @@ body {
     padding: 0px 0px 5px 5px;
 }
 #loginFormSubmit {
-    width: auto;
-    height: auto;
-    padding: 5px;
-    border: none;
+    font-family: "Open Sans";
+    width: 14%;
+    height: 6%;
+    border: #FFFAF0;
     border-radius: 5px;
-    font-size: 7px;
-    color: lemonchiffon;
+    font-size: 15px;
     text-align: center;
+    color:  #FFFACD;
+    position: absolute;
+    bottom: 9%;
+    left: 35%;
+    top: 56%;
     background-color: #3a3a3a;
     -webkit-appearance: checkbox;
     -moz-appearance: checkbox;
-    display: inline-block;
 }
 .loginFormSubmit:first-child {
     align-self: center;
 }
+#loginHeader{
+    display: grid;
+}
+
 #createAcctFormSubmit{
     padding: 5px;
     border-radius: 5px;
     display: inline-block;
     background-color: rgba(161,161,161,0.89);
+    position: fixed;
+    left: 35%;
+    top: 70%;
 }
 a{
     font-size: 15px;

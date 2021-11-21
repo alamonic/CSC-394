@@ -5,30 +5,28 @@
     <title> Login Page </title>
     <link rel = "stylesheet" href = "index.css">
     <script defer src = "index.js"></script>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Prompt">
 </head>
 <body>
+        <h1 id="welcomeHeader"> Welcome </h1>
+        <h2 id = "loginHeader"> Sign into your account </h2>
 
-    <main id = "main">
-      <h1 id = "loginHeader"> Login </h1>
+
         <div id = "loginErrorMsgHolder">
             <p id = "loginErrorMsg"> Invalid username <span id="errorMsgSecondLine"> or password </span></p>
         </div>
 
-        <div id="createAcctFormSubmit"><a href="createAccount.html"> Create New Account Here</a></span>
-        </div>
+        <div id="createAcctFormSubmit"><a href="createAccount.html"> Create New Account Here</a></span></div>
 
         <form id="loginForm">
             <input type = "text" name = "username" id = "usernameField" class = "loginForm" placeholder = "Username">
             <input type = "password" name = "password" id = "passwordField" class = "loginForm" placeholder = "Password">
-            <input type="checkbox" value="lsRememberMe" id="rememberMe"> <label for="rememberMe">Remember me</label>
+            <input type="checkbox" value="lsRememberMe" id="rememberMe"> <label for="rememberMe"></label>
             <input value="Login" id = "loginFormSubmit" onclick="isRememberMe()">
         </form>
-        <!--
-        <form id="createAccount.html">
-            <input type="submit" id = "createAcctFormSubmit" value="Create Account" />
-        </form>
-        -->
-        
-    </main>
+        <div id="remeMe">Remember me</div>
+
 </body>
 </html>

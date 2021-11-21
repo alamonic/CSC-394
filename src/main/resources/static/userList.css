@@ -1,13 +1,15 @@
 html{
-    height: 110%;
+    height: 100%;
 }
 
 body {
-    min-height: 100vh;
     background-color: #e6e6e6;
-    font-family:  'Open Sans';
+    font-family: "Inter";
 }
-
+#userHeader{
+    font-family: "Prompt";
+    left: 40%;
+}
 h1 {
     font-size: 30px;
     position: absolute;
