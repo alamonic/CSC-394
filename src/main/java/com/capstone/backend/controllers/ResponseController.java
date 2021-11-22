@@ -35,23 +35,24 @@ public class ResponseController {
         return response;
         }
 
-    @GetMapping("/stopttimer")
-    Map<String, String> getFinalTime(HttpServletRequest request) {
+    void getFinalTime(HttpServletRequest request) {
         HttpSession session = request.getSession();
         if (session.getAttribute("Initial Time") != null) {
             Long delta = System.currentTimeMillis() - (long) session.getAttribute("Initial Time");
             session.setAttribute("Initial Time", null);
             session.setAttribute("Final Time", delta);
         }
-            HashMap<String, String> response = new HashMap<>();
-            response.put("status", "" + (Long)session.getAttribute("Final Time"));
-            return response;
     }
 
     @GetMapping
     Iterable<Response> getAllResponses() {
         return responseRepo.findAll();
     }
+
+    /*@GetMapping("/getallresponses")
+    Map<String, String> getResponseOutput(HttpServletRequest request) {
+        HttpSession session = request.getSession();
+    }*/
 
     @PostMapping
     Map<String, String> createResponse(@RequestBody String level, HttpServletRequest request) {

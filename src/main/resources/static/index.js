@@ -24,7 +24,7 @@ function isRememberMe() {
             }
         })
 }
-loginButton.addEventListener("click", isRememberMe)
+//loginButton.addEventListener("click", isRememberMe)
 
 
 

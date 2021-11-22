@@ -11,14 +11,14 @@
 
     
 
-<form method="POST" action="responses">
+<form onsubmit="changeToResponseTestPage(event)">
     <p>How difficult was the assigned task:</p>
-  <input type="radio" id="very" name="level" value="very">
-  <label for="veryDiffucult">Very diffucult</label><br>
-  <input type="radio" id="moderate" name="level" value="moderate">
-  <label for="moderatelyDifficult">Moderately difficult</label><br>
-  <input type="radio" id="easy" name="level" value="easy">
-  <label for="veryEasy">Very easy</label><br><br>
-  <input type="submit" value="Submit">
+     <input type="radio" id="very" name="level" value="very">
+     <label for="very">Very difficult</label><br>
+     <input type="radio" id="moderate" name="level" value="moderate">
+     <label for="moderate">Moderately difficult</label><br>
+     <input type="radio" id="easy" name="level" value="easy">
+     <label for="easy">Very easy</label><br><br>
+  <input type="submit" id = "submissionBox" value="Submit" >
 </form>
 </body>

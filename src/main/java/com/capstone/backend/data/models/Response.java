@@ -91,4 +91,25 @@ public class Response {
                 ", user_id=" + userId +
                 '}';
     }
+
+    public String toJSONString() {
+
+        return "{" +
+                "  " + '"' + "response_id" + '"' + " : " + response_id +
+                ", " + '"' + "time_to_complete" + '"' + " : " + time_to_complete +
+                ", " + '"' + "comments" + '"' + " : " + '"' + comments + '"' +
+                ", " + '"' + "question1" + '"' + " : " + '"' + question1 + '"' +
+                ", " + '"' + "response1" + '"' + " : "       + response1 +
+                ", " + '"' + "question2" + '"' + " : " + '"' + question2 + '"' +
+                ", " + '"' + "response2" + '"' + " : "       + response2 +
+                ", " + '"' + "question3" + '"' + " : " + '"' + question3 + '"' +
+                ", " + '"' + "response3" + '"' + " : "       + response3 +
+                ", " + '"' + "question4" + '"' + " : " + '"' + question4 + '"' +
+                ", " + '"' + "response4" + '"' + " : "       + response4 +
+                ", " + '"' + "question5" + '"' + " : " + '"' + question5 + '"' +
+                ", " + '"' + "response5" + '"' + " : "       + response5 +
+                ", " + '"' + "user_id" + '"' + " : " + userId +
+                '}';
+
+    }
 }
