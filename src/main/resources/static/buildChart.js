@@ -25,11 +25,11 @@ function drawChart() {
                     var strRes;
 
                     if (val == 1)
-                    {strRes = "Very difficult"}
+                    {strRes = "Very easy"}
                     else if (val == 3)
                     {strRes = "Moderately difficult"}
                     else if (val == 5)
-                    {strRes = "Very easy"}
+                    {strRes = "Very difficult"}
                     else
                     {strRes = "Default"}
 
