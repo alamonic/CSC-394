@@ -21,6 +21,7 @@ function changeToResponseTestPage(e)
         .then(
         data => {
             console.log(data);
+            location.href = 'userPage.html';
         })
 }
 

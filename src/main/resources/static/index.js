@@ -11,11 +11,11 @@ function isRememberMe() {
             console.log(data)
             if (data.status === "user") {
                 alert("Successful, logging in now");
-                location.href = `${location.href}userPage.html`;
+                location.href = 'userPage.html';
             }
             else if (data.status === "admin") {
                 alert("Successful, logging in now");
-                location.href = `${location.href}adminDashboard.html`;
+                location.href = 'adminDashboard.html';
             }
             else {
                 loginErrorMsg.style.opacity = 1;
