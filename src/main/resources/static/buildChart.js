@@ -33,7 +33,11 @@ function drawChart() {
                     else
                     {strRes = "Default"}
 
-                    results.insertRow(-1).insertCell(0).innerHTML = strRes;
+                    var row = results.insertRow(-1);
+
+                    row.insertCell(0).innerHTML = data[i].userId.username;
+                    row.insertCell(1).innerHTML = strRes;
+                    row.insertCell(2).innerHTML = data[i].comments;
                 }
                 afterGet(results, dataTable);
             })
@@ -44,7 +48,7 @@ function afterGet(results, dataTable)
     Array.prototype.forEach.call(results.rows, function(row) {
             if (row.rowIndex >= 0) {
                 dataTable.addRow([
-                    { v: (row.cells[0].textContent || row.cells[0].innerHTML).trim() },
+                    { v: (row.cells[1].textContent || row.cells[1].innerHTML).trim() },
                     { v: 1 }
                 ]);
             }
