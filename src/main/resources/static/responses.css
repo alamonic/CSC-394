@@ -1,0 +1,128 @@
+html{
+    height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #e6e6e6;
+    font-family:  'Open Sans';
+}
+h1 {
+    font-family: "Prompt";
+    font-size: 30px;
+}
+h2{
+    font-family: "Prompt";
+    position: absolute;
+    top: 80%;
+    left: 20%;
+}
+#bio{
+    font-family: "Open Sans";
+    font-size: 15px;
+    position: absolute;
+    top: 12%;
+    left: 20%;
+}
+body, .topNav, .navBar {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+.topNav {
+    position: absolute;
+    left: 60px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    font-size: 16px;
+    height: 60px;
+    transition: 0.5s;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0,0,0,.2);
+}
+.navBar {
+    margin: 0;
+    padding: 0;
+    width: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.topNav input:checked ~ .navBar {
+    width: 470px;
+    height: 50px;
+}
+.navBar li {
+    list-style: none;
+    margin: 10px;
+}
+.navBar li a {
+    text-decoration: none;
+    color: #666;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: 0.5s;
+    font-size: 13px;
+}
+.navBar li a:hover {
+    color: #161919;
+}
+.topNav input {
+    width: 40px;
+    height: 50px;
+    cursor: pointer;
+    opacity: 0;
+}
+.topNav span {
+    position: absolute;
+    left: 30px;
+    width: 30px;
+    height: 7px;
+    border-radius: 50px;
+    background-color: #595959;
+    pointer-events: none;
+    transition: 0.5s;
+}
+.topNav input:checked ~ span {
+    background-color: #77773c;
+}
+.topNav span:nth-child(2) {
+    transform: translateY(-8px);
+}
+.topNav input:checked ~ span:nth-child(2) {
+    transform: translateY(0) rotate(-45deg);
+}
+.topNav span:nth-child(3) {
+    transform: translateY(8px);
+}
+.topNav input:checked ~ span:nth-child(3) {
+    transform: translateY(0) rotate(45deg);
+}
+#piechart{
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    font-family: "Prompt";
+    font-size: 15px;
+}
+#results{
+    position: absolute;
+    top: 90%;
+    left: 20%;
+    font-family: "Prompt";
+    font-size: 10px;
+}
+table {
+    border-collapse: collapse;
+}
+td, th {
+    border: 1px solid black;
+    padding: 4px 4px 4px 4px;
+}
+#responses{
+    position: absolute;
+    top: 24%;
+    left: 25%;
+    font-family: "Prompt";
+    font-size: 15px;
+}

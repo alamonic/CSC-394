@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel = "stylesheet" href = "assignWork.css">
+    <link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Inter" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Proza+Libre">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Prompt">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <title>Work</title>
+    <script>
+        function assignSubmit() {
+            alert("Assigned sent!");
+        }
+        function rewardSubmit() {
+            alert("Assigned sent!");
+        }
+    </script>
+
+</head>
+<body>
+    <div class="topNav">
+        <input type="checkbox">
+        <span> </span>
+        <span></span>
+        <div class="navBar">
+            <li><a href="adminDashboard.html">Home</a></li>
+            <li><a href="responses.html">Analytic Tool</a></li>
+            <li><a href="questions.html">Questions</a></li>
+            <li><a href="assignWork.html">Assign Work</a></li>
+        </div>
+    </div>
+    <h1> Assign Work And Reward Users</h1>
+
+    <h2> Assign Users </h2>
+    <div id="assignWorkBio">
+        <p>Administrator can assign work to users by entering their name and type of work <br>See below:</p>
+    </div>
+    <div class="assign">
+        <form > <div class="fullName">
+            <label for="firstName"> First name: </label> <br>
+            <input type="text" id="firstName" name="firstName" style= "height:15px; width:150px" placeholder= "Enter"/><br>
+            <label for="lastName"> Last name: </label> <br>
+            <input type="text" id="lastName" name="lastName" style= "height:15px; width:150px" placeholder= "Enter"/>
+        </div>
+            <input  type="button" value="Assign"  id = "assignSubmit" onclick="assignSubmit()">
+
+            <div id="assignWorkHeader">Assign Work:</div>
+            <label for="assignWork"></label> <br>
+            <input type="text" id="assignWork" name="assignWork" style= "height:15px; width:150px" placeholder= "Type of Work?"/><br>
+        </form>
+    </div>
+
+    <h3> Reward Users </h3>
+    <div id="rewardUsersBio">
+        <p>Administrator can send shout-out awards to users. Entering their name and choose type of award <br>See below:</p>
+    </div>
+    <div class="reward">
+        <form > <div class="fullNameReward">
+            <label for="firstNameReward"> First name: </label> <br> <input type="text" id="firstNameReward" name="firstNameReward" style= "height:15px; width:150px" placeholder= "Enter"/><br>
+            <label for="lastNameReward"> Last name: </label> <br> <input type="text" id="lastNameReward" name="lastNameReward" style= "height:15px; width:150px" placeholder= "Enter"/>
+        </div>
+            <div id="rewardUsersCheckbox">
+                <p>Choose Reward Option  </p>
+            </div>
+            <input type="checkbox" value="rewardType" id="rewardType"> <label for="rewardType"></label>
+        </form>
+        <input type="button" value="Send!"  id = "rewardSubmit" onclick="rewardSubmit()">
+    </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <title> Create Account </title>
+    <link rel = "stylesheet" href = "createAcct1.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Prompt">
+    <!-- <script defer src = "create.js"></script> -->
+    <script type="text/javascript">
+    function accountMessage() {
+        alert("Account created successfully!");
+    }
+    </script>
+
+</head>
+<!--
+<form action="index.html">
+    <input type="submit" value="Back to Login" />
+</form>
+-->
+<div id="backToLoginFormSubmit">
+    <span class="backToLoginFormLink" > <a href="index.html"> Back to Login</a></span>
+</div>
+
+<h1 id = "createAcct"> Create Account Here! </h1>
+
+<body>
+    <main id = "main">
+        <form id= "createForm">
+            <input type = "text" name = "First Name" id = "firstName" class = "createForm" placeholder = "First Name">
+            <input type = "text" name = "Last Name" id = "lastName" class = "createForm" placeholder = "Last Name">
+            <input type = "tel" name = "Phone Number" id = "phoneID" class = "createForm" placeholder = "Phone Number">
+            <input type = "text" name = "Email" id = "email" class = "createForm" placeholder = "Email">
+            <input type = "text" name = "Username" id = "username" class = "createForm" placeholder = "Username">
+            <input type = "password" name = "Password" id = "pwd" class = "createForm" placeholder = "Password">
+            <input type= "button" value="Sign Up"  id = "createbtnShowMsg" onclick="accountMessage()" >
+        </form>
+    </main>
+</body>
+</html>

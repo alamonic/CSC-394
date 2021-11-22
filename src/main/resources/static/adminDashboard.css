@@ -1,0 +1,88 @@
+html{
+    height: 110%;
+}
+
+body {
+    min-height: 80vh;
+    background-color: #e6e6e6;
+    font-family: "Inter";
+}
+
+h1 {
+    font-size: 40px;
+    font-family: "Prompt";
+}
+
+body, .centerNav, .navBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centerNav {
+    position: relative;
+    background-color: #f2f2f2;
+    padding: 20px;
+    transition: 0.5s;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0,0,0,.2);
+}
+
+.navBar {
+    margin: 0;
+    padding: 0;
+    width: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.centerNav input:checked ~ .navBar {
+    width: 455px;
+}
+
+.navBar li {
+    list-style: none;
+    margin: 10px;
+}
+.navBar li a {
+    text-decoration: none;
+    color: #666;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: 0.5s;
+    font-size: 13px;
+}
+.navBar li a:hover {
+    color: #161919;
+}
+.centerNav input {
+    width: 40px;
+    height: 50px;
+    cursor: pointer;
+    opacity: 0;
+}
+.centerNav span {
+    position: absolute;
+    left: 30px;
+    width: 30px;
+    height: 4px;
+    border-radius: 50px;
+    background-color: #595959;
+    pointer-events: none;
+    transition: 0.5s;
+}
+.centerNav input:checked ~ span {
+    background-color: #77773c;
+}
+.centerNav span:nth-child(2) {
+    transform: translateY(-8px);
+}
+.centerNav input:checked ~ span:nth-child(2) {
+    transform: translateY(0) rotate(-45deg);
+}
+.centerNav span:nth-child(3) {
+    transform: translateY(8px);
+}
+.centerNav input:checked ~ span:nth-child(3) {
+    transform: translateY(0) rotate(45deg);
+}
