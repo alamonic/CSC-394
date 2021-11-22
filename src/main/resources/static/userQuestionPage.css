@@ -1,14 +1,14 @@
-
+html{
+    height: 100%;
+}
 
 body {
     height: 100%;
     margin: 0;
-    font-family: "Arial Black", sans-serif;
+    font-family: "Inter";
     background-color: #e6e6e6;
 }
-
 #userQuestionHeadermain {
-    
     padding: 5px;
     font-size: 18px;
     justify-items: center;
@@ -22,5 +22,3 @@ form {
     border-radius: 4px;
     float: left;
   }
-
-

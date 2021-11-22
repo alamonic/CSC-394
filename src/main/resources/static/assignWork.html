@@ -8,6 +8,14 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Prompt">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <title>Work</title>
+    <script>
+        function assignSubmit() {
+            alert("Assigned sent!");
+        }
+        function rewardSubmit() {
+            alert("Assigned sent!");
+        }
+    </script>
 
 </head>
 <body>
@@ -35,7 +43,7 @@
             <label for="lastName"> Last name: </label> <br>
             <input type="text" id="lastName" name="lastName" style= "height:15px; width:150px" placeholder= "Enter"/>
         </div>
-            <input type="submit" value="Assign"  id = "assignSubmit" onclick="">
+            <input  type="button" value="Assign"  id = "assignSubmit" onclick="assignSubmit()">
 
             <div id="assignWorkHeader">Assign Work:</div>
             <label for="assignWork"></label> <br>
@@ -57,7 +65,7 @@
             </div>
             <input type="checkbox" value="rewardType" id="rewardType"> <label for="rewardType"></label>
         </form>
-        <input type="submit" value="Send!"  id = "rewardSubmit" onclick="">
+        <input type="button" value="Send!"  id = "rewardSubmit" onclick="rewardSubmit()">
     </div>
 </body>
 </html>
